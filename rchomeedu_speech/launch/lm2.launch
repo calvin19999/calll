@@ -1,0 +1,44 @@
+<launch>
+
+     <!--
+     Args with no default attribute are not optional
+     -->
+     <arg name="input" default=":default"/>
+     <arg name="hmm" default="/home/dreaming/catkin_ws/devel/share/pocketphinx/model/en-us/en-us/hub4wsj_sc_8k"/>
+     <arg name="dict"/home/dreaming/catkin_ws/src/edu_athome/rc-home-edu-learn-ros/rchomeedu_speech/robocup/voice_reply/Volcab.dic"/>
+     <arg name="lm" default="/home/dreaming/catkin_ws/src/edu_athome/rc-home-edu-learn-ros/rchomeedu_speech/robocup/voice_reply/Volcab.lm"/>
+     <arg name="gram" default=":default:/>
+     <arg name="grammar" default=":default"/>
+     <arg name="rule" default=":default"/>
+ 
+     <!--
+     Node for handling in mode 
+     -->
+	<node
+		name="lm_control"
+		pkg="rchomeedu_speech"
+		type="lm_test.py"
+	output="screen"
+	>
+	<remap from="jsgf_audio" to="sphinx_audio" />
+	<param name="lm" value="$(arg lm)"/>
+	<param name="dict" value="$(arg dict)"/>
+	<param name="hmm" value="$(arg hmm)"/>
+	<param name="gram" value="$(arg gram)"/>
+	<param name="grammar" value="$(arg grammar)"/>
+	<param name="rule" value="$(arg rule)"/>
+	</node>
+
+     <!--
+     Node for publishing audio inputs
+     -->
+     <node
+	name="audio_control"
+	pkg="pocketsphinx"
+	type="send_audio.py"
+	output="screen"
+	>
+
+	 <param name="input" value="$(arg input)"/>
+      </node>
+</launch>

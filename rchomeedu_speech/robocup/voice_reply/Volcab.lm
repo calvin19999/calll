@@ -1,0 +1,70 @@
+Language model created by QuickLM on Fri Jul 24 10:02:07 EDT 2020
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 8 sentences and 13 words
+
+\data\
+ngram 1=13
+ngram 2=19
+ngram 3=15
+
+\1-grams:
+-0.9031 </s> -0.3010
+-0.9031 <s> -0.2430
+-1.8062 DOWN -0.2430
+-1.5051 DREAMING -0.2430
+-1.8062 HATE -0.2942
+-1.2041 I -0.2730
+-1.8062 LEFT -0.2430
+-1.5051 LOVE -0.2802
+-1.8062 MYSELF -0.2430
+-1.8062 RIGHT -0.2430
+-1.8062 UP -0.2430
+-1.8062 WAS -0.2872
+-1.8062 YOU -0.2430
+
+\2-grams:
+-1.2041 <s> DOWN 0.0000
+-0.6021 <s> I 0.0000
+-1.2041 <s> LEFT 0.0000
+-1.2041 <s> RIGHT 0.0000
+-1.2041 <s> UP 0.0000
+-0.3010 DOWN </s> -0.3010
+-0.3010 DREAMING </s> -0.3010
+-0.3010 HATE YOU 0.0000
+-0.9031 I HATE 0.0000
+-0.6021 I LOVE 0.0000
+-0.9031 I WAS 0.0000
+-0.3010 LEFT </s> -0.3010
+-0.6021 LOVE DREAMING 0.0000
+-0.6021 LOVE MYSELF 0.0000
+-0.3010 MYSELF </s> -0.3010
+-0.3010 RIGHT </s> -0.3010
+-0.3010 UP </s> -0.3010
+-0.3010 WAS DREAMING 0.0000
+-0.3010 YOU </s> -0.3010
+
+\3-grams:
+-0.3010 <s> DOWN </s>
+-0.9031 <s> I HATE
+-0.6021 <s> I LOVE
+-0.9031 <s> I WAS
+-0.3010 <s> LEFT </s>
+-0.3010 <s> RIGHT </s>
+-0.3010 <s> UP </s>
+-0.3010 HATE YOU </s>
+-0.3010 I HATE YOU
+-0.6021 I LOVE DREAMING
+-0.6021 I LOVE MYSELF
+-0.3010 I WAS DREAMING
+-0.3010 LOVE DREAMING </s>
+-0.3010 LOVE MYSELF </s>
+-0.3010 WAS DREAMING </s>
+
+\end\
